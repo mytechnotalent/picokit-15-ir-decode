@@ -1,0 +1,68 @@
+{
+  "repo": "picokit-15-ir-decode",
+  "eyebrow": "PICOKIT // LESSON 15",
+  "title": "PICOKIT // IR DECODE",
+  "subtitle": "VS1838B NEC DECODE + AUTHENTICATED HEARTBEAT",
+  "accent": "#D947FF",
+  "dim": "#862C9E",
+  "white": "#EEDCFF",
+  "cyan": "#7FD8E0",
+  "bg": "#0F0411",
+  "bg_edge": "#040105",
+  "icon": "remote",
+  "panel_status": "NEC 0x45  ·  CMDS 12  ·  AEAD :ON",
+  "chips": [
+    {
+      "label": "SENSOR",
+      "value": "GP5"
+    },
+    {
+      "label": "CMD",
+      "value": "0x45"
+    },
+    {
+      "label": "KEY",
+      "value": "argon2id"
+    },
+    {
+      "label": "RADIO",
+      "value": "-38 dBm"
+    }
+  ],
+  "terminal": [
+    "$ gateway listen /dev/cu.usbserial-A50285BI",
+    "[*] node 00015  seq 18  HEARTBEAT  AEAD ok",
+    "[*] anti-replay window ok  counter 18",
+    "[+] ir cmd 0x45  raw command 69  onboard blink",
+    "[+] ack sent  rssi -38  snr 8.8"
+  ],
+  "categories": [
+    "IR",
+    "NEC",
+    "SECURE",
+    "LINK"
+  ],
+  "cards": [
+    {
+      "tag": "NEC-01",
+      "label": "leader",
+      "value": "9 ms"
+    },
+    {
+      "tag": "NEC-02",
+      "label": "bit zero",
+      "value": "560 us"
+    },
+    {
+      "tag": "NEC-03",
+      "label": "bit one",
+      "value": "1690 us"
+    }
+  ],
+  "footer": [
+    "1 NODE  ·  1 GATEWAY  ·  2 WAY LORA  ·  NO PLAINTEXT",
+    "PICOKIT SERIES  ·  OUTPUT  ·  INPUT  ·  RADIO  ==[ DECODE ]=="
+  ],
+  "layout": "grid",
+  "stat": "GP5"
+}
